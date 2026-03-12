@@ -1,15 +1,129 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Web Game Portfolio</title>
+
+<title>Corkscrew GAMES</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#111;
+color:white;
+text-align:center;
+}
+
+header{
+padding:40px 20px 20px 20px;
+}
+
+.logo{
+font-size:48px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.tagline{
+margin-top:10px;
+color:#aaa;
+font-size:16px;
+}
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:16px;
+padding:20px;
+max-width:900px;
+margin:auto;
+}
+
+.game{
+background:#222;
+border-radius:12px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+.game img{
+width:100%;
+display:block;
+}
+
+.game span{
+display:block;
+padding:8px;
+font-size:14px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+font-size:12px;
+color:#888;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>My Web Game Portfolio</h1>
-<p>スマホ対応WEBゲーム集</p>
+<header>
+
+<div class="logo">CorkScrew GAMES</div>
+
+<div class="tagline">
+One Screen. One Minute. Simple Fun.
+</div>
+
+</header>
+
+
+<section class="games">
+
+<a class="game" href="games/01/index.html">
+<img src="games/01/thumb.png">
+<span>01</span>
+</a>
+
+<a class="game" href="games/02/index.html">
+<img src="games/02/thumb.png">
+<span>02</span>
+</a>
+
+<a class="game" href="games/03/index.html">
+<img src="games/03/thumb.png">
+<span>03</span>
+</a>
+
+<a class="game" href="games/04/index.html">
+<img src="games/04/thumb.png">
+<span>04</span>
+</a>
+
+<a class="game" href="games/05/index.html">
+<img src="games/05/thumb.png">
+<span>05</span>
+</a>
+
+<a class="game" href="games/06/index.html">
+<img src="games/06/thumb.png">
+<span>06</span>
+</a>
+
+</section>
+
+
+<footer>
+
+(c) CorkScrew GAMES
+
+</footer>
 
 </body>
 </html>
