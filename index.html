@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Corkscrew GAMES</title>
+<title>Corkscrew Games</title>
 
 <style>
 
@@ -17,7 +17,7 @@ text-align:center;
 }
 
 header{
-padding:40px 20px 20px 20px;
+padding:40px 20px;
 }
 
 .logo{
@@ -32,32 +32,50 @@ color:#aaa;
 font-size:16px;
 }
 
-.games{
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
-padding:20px;
-max-width:500px;
-margin:auto;
+/* セクション共通 */
+section{
+max-width:600px;
+margin:40px auto;
+padding:0 20px;
+text-align:left;
 }
 
-.game{
+h2{
+border-bottom:1px solid #333;
+padding-bottom:10px;
+margin-bottom:20px;
+}
+
+/* ゲームリスト */
+.game-list a{
+display:block;
 background:#222;
-border-radius:12px;
-overflow:hidden;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
 text-decoration:none;
 color:white;
-box-shadow:0 4px 10px rgba(0,0,0,0.4);
-padding:40px;
-font-size:20px;
+transition:0.2s;
 }
 
-.game:hover{
+.game-list a:hover{
 background:#333;
 }
 
+/* リンク */
+.link{
+display:block;
+margin-bottom:10px;
+color:#4da6ff;
+text-decoration:none;
+}
+
+.link:hover{
+text-decoration:underline;
+}
+
 footer{
-margin-top:40px;
+margin-top:60px;
 padding:20px;
 font-size:12px;
 color:#888;
@@ -69,29 +87,38 @@ color:#888;
 <body>
 
 <header>
-
-<div class="logo">CorkScrew GAMES</div>
-
-<div class="tagline">
-One Screen. One Minute. Simple Fun.
-</div>
-
+<div class="logo">Corkscrew Games</div>
+<div class="tagline">All games are playable without download.</div>
 </header>
 
+<!-- Games -->
+<section>
+<h2>Game</h2>
 
-<section class="games">
-
-<a class="game" href="https://corkscrew168.github.io/stars/">
-🎮 PLAY STAR GAME
-</a>
+<div class="game-list">
+<a href="#">title 1</a>
+<a href="#">title 2</a>
+<a href="#">title 3</a>
+<a href="#">title 4</a>
+</div>
 
 </section>
 
+<!-- Works -->
+<section>
+<h2>Works</h2>
+<p>Customizable for events & promotions.</p>
+</section>
+
+<!-- Links -->
+<section>
+<h2>Links</h2>
+<a class="link" href="https://github.com/corkscrew168/corkscrew168.github.io.git">GitHub</a>
+<a class="link" href="#">Contact</a>
+</section>
 
 <footer>
-
-(c) CorkScrew GAMES
-
+© 2026 Takuya Kozai
 </footer>
 
 </body>
