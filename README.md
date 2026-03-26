@@ -1,14 +1,6 @@
-# corkscrew168.github.io
+# Corkscrew Games
 
-Corkscrew Games
-
-All games are playable without download.
+Playable browser games. No download required.  
 Customizable for events & promotions.
 
-Built with Excalibur.js / TypeScript
-
-
-Website: https://corkscrew168.github.io/
-
-GitHub: https://github.com/corkscrew168
-
+https://corkscrew168.github.io/
