@@ -25,8 +25,9 @@ padding:40px 20px;
 
 .logo{
 font-size:52px;
-font-weight:700; /* ← 少し太めでかっこよく */
+font-weight:700;
 letter-spacing:1px;
+line-height:1.1; /* ← 行間調整（PC） */
 }
 
 .tagline{
@@ -83,6 +84,14 @@ margin-top:60px;
 padding:20px;
 font-size:12px;
 color:#666;
+}
+
+/* 📱 スマホ用調整 */
+@media (max-width: 600px) {
+  .logo{
+    font-size:42px;
+    line-height:1.05; /* ← スマホでさらに詰める */
+  }
 }
 
 </style>
