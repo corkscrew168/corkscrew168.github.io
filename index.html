@@ -13,154 +13,125 @@
 body{
   margin:0;
   font-family:'Poppins', sans-serif;
+  background:#ddd;
+  display:flex;
+  justify-content:center;
+}
+
+/* フレーム */
+.frame{
+  max-width:370px;
+  width:100%;
   background:#f2f2f2;
-  color:#222;
+}
+
+/* ヘッダー */
+header{
+  padding:30px 10px;
   text-align:center;
 }
 
-header{
-  padding:40px 20px;
-}
-
-/* ロゴ */
+/* ロゴ（ここが今回の重要ポイント） */
 .logo{
-  font-size:52px;
+  font-size:clamp(22px, 6vw, 32px);
   font-weight:700;
   background:#000;
   color:#fff;
-  padding:10px 20px;
+  padding:8px 14px;
   border-radius:8px;
+  display:inline-block;
+  white-space:nowrap;
 }
 
-/* アニメエリア */
+/* アニメ */
 .pixel-area{
   position:relative;
-  height:80px;
-  margin-top:20px;
+  height:70px;
+  margin-top:15px;
   overflow:hidden;
 }
 
-/* 棒人間 */
 .man{
   position:absolute;
   bottom:0;
-  width:6px;
+  width:5px;
   background:#000;
 }
 
-/* サイズ（家族感） */
-.A{ height:40px; } /* 親 */
-.B{ height:34px; }
-.C{ height:28px; } /* 子 */
-.D{ height:20px; } /* 小さい子 */
+/* サイズ */
+.A{ height:38px; }
+.B{ height:32px; }
+.C{ height:26px; }
+.D{ height:18px; }
 
-/* ---------------- */
-/* A：親（ゆっくり見守る） */
-/* ---------------- */
-.A{
-  animation: walkA 18s linear infinite;
+/* A */
+.A{ animation:A 18s linear infinite; }
+@keyframes A{
+  0%{ left:-30px; transform:translateY(0); }
+  40%{ left:30%; }
+  55%{ left:32%; }
+  100%{ left:95%; transform:translateY(0); }
 }
 
-@keyframes walkA{
-  0%{ left:-40px; transform:translateY(0); }
-  40%{ left:32%; transform:translateY(0); }
-
-  /* 少し止まる（見守る） */
-  55%{ left:34%; transform:translateY(0); }
-
+/* B */
+.B{ animation:B 18s linear infinite; }
+@keyframes B{
+  0%{ left:-60px; transform:translateY(0); }
+  40%{ left:28%; }
+  50%{ left:32%; }
+  60%{ left:30%; }
   100%{ left:100%; transform:translateY(0); }
 }
 
-/* ---------------- */
-/* B：気づく人 */
-/* ---------------- */
-.B{
-  animation: walkB 18s linear infinite;
+/* C */
+.C{ animation:C 18s linear infinite; }
+@keyframes C{
+  0%{ left:-90px; transform:translateY(0) rotate(0); }
+  45%{ left:34%; }
+  50%{ left:35%; transform:translateY(2px) rotate(90deg); }
+  60%{ left:35%; transform:translateY(2px) rotate(90deg); }
+  70%{ transform:rotate(0); }
+  100%{ left:105%; transform:translateY(0) rotate(0); }
 }
 
-@keyframes walkB{
-  0%{ left:-80px; transform:translateY(0); }
-  40%{ left:30%; transform:translateY(0); }
-
-  /* 少し前に出る（気づく） */
-  50%{ left:34%; transform:translateY(0); }
-
-  /* 少し戻る */
-  60%{ left:32%; transform:translateY(0); }
-
-  100%{ left:100%; transform:translateY(0); }
+/* D */
+.D{ animation:D 18s linear infinite; }
+@keyframes D{
+  0%{ left:-120px; transform:translateY(0); }
+  45%{ left:32%; }
+  50%{ left:30%; }
+  65%{ left:30%; }
+  100%{ left:110%; transform:translateY(0); }
 }
 
-/* ---------------- */
-/* C：子供（転ぶ） */
-/* ---------------- */
-.C{
-  animation: walkC 18s linear infinite;
+/* スマホ速度 */
+@media (max-width:600px){
+  .A,.B,.C,.D{
+    animation-duration:14s;
+  }
 }
 
-@keyframes walkC{
-  0%{ left:-120px; transform:translateY(0) rotate(0); }
-  45%{ left:35%; transform:translateY(0) rotate(0); }
-
-  /* 転ぶ（ほんの少しズレ） */
-  50%{ left:36%; transform:translateY(2px) rotate(90deg); }
-
-  /* 少し止まる */
-  60%{ left:36%; transform:translateY(0) rotate(90deg); }
-
-  /* 起きる */
-  70%{ transform:translateY(0) rotate(0); }
-
-  100%{ left:100%; transform:translateY(0) rotate(0); }
-}
-
-/* ---------------- */
-/* D：小さい子（不安で戻る） */
-/* ---------------- */
-.D{
-  animation: walkD 18s linear infinite;
-}
-
-@keyframes walkD{
-  0%{ left:-160px; transform:translateY(0); }
-  45%{ left:33%; transform:translateY(0); }
-
-  /* 少し戻る */
-  50%{ left:31%; transform:translateY(1px); }
-
-  /* 少し止まる */
-  65%{ left:31%; transform:translateY(0); }
-
-  100%{ left:100%; transform:translateY(0); }
-}
-
-/* ---------------- */
 /* セクション */
-/* ---------------- */
-
 section{
-  max-width:600px;
-  margin:40px auto;
-  padding:0 20px;
-  text-align:left;
+  padding:10px 20px;
 }
 
 h2{
   border-bottom:1px solid #ccc;
-  padding-bottom:10px;
-  margin-bottom:20px;
+  font-size:14px;
+  margin-bottom:10px;
 }
 
-section p, .link{
+p, .link{
   font-size:12px;
 }
 
 .game-list a{
   display:block;
   background:#fff;
-  padding:20px;
-  margin-bottom:15px;
-  border-radius:10px;
+  padding:12px;
+  margin-bottom:8px;
+  border-radius:8px;
   text-decoration:none;
   color:#222;
 }
@@ -170,14 +141,18 @@ section p, .link{
 }
 
 footer{
-  margin-top:60px;
-  font-size:12px;
+  font-size:11px;
+  margin-top:20px;
+  padding:10px;
+  text-align:center;
 }
 
 </style>
 </head>
 
 <body>
+
+<div class="frame">
 
 <header>
   <div class="logo">
@@ -190,7 +165,6 @@ footer{
     <div class="man C"></div>
     <div class="man D"></div>
   </div>
-
 </header>
 
 <section>
@@ -212,12 +186,16 @@ footer{
 
 <section>
 <h2>Contact</h2>
-<a class="link" href="#">Get in Touch</a>
+<a class="link" href="#">
+Get in Touch
+</a>
 </section>
 
 <footer>
 © 2026 Takuya Kozai
 </footer>
+
+</div>
 
 </body>
 </html>
