@@ -22,7 +22,7 @@ header{
   padding:40px 20px;
 }
 
-/* ロゴ：黒背景に白文字 */
+/* ロゴ：黒背景に白文字、途中の文字だけ薄色 */
 .logo{
   font-size:52px;
   font-weight:700;
@@ -34,6 +34,9 @@ header{
   padding: 10px 20px;
   border-radius: 8px;     /* 角丸 */
 }
+
+.logo .highlight-or { color: #ffb266; } /* 薄めオレンジ */
+.logo .highlight-w  { color: #99ccff; } /* 薄め水色 */
 
 /* セクション共通 */
 section{
@@ -51,7 +54,7 @@ h2{
 
 /* 見出し下の文字を全部12pxに統一 */
 section p, section .tagline, .link {
-  font-size:12px;  /* 小さく統一 */
+  font-size:12px;  
   color:#222;
   font-weight:400;
   line-height:1.5;
@@ -105,13 +108,14 @@ footer{
 <body>
 
 <header>
-  <div class="logo">Corkscrew Games</div>
+  <div class="logo">
+    C<span class="highlight-or">or</span>kscr<span class="highlight-w">w</span> Games
+  </div>
 </header>
 
 <!-- Games -->
 <section>
 <h2>Game</h2>
-
 <p class="tagline">All games are playable without download.</p>
 
 <div class="game-list">
@@ -125,19 +129,15 @@ footer{
 <!-- Business -->
 <section>
 <h2>Business</h2>
-
 <p>Customizable for events & promotions.</p>
-
 </section>
 
 <!-- Contact -->
 <section>
 <h2>Contact</h2>
-
 <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfoyW_CNaztiuZGE3RXhN_NbS4yNZpVx0BgshRme7UXk-YVrA/viewform?usp=publish-editor">
 Get in Touch
 </a>
-
 </section>
 
 <footer>
