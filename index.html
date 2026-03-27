@@ -49,14 +49,14 @@ h2{
   margin-bottom:20px;
 }
 
-/* Gameセクション説明文をBusinessのpと揃える */
-section .tagline {
+/* 見出し下の文字を全部12pxに統一 */
+section p, section .tagline, .link {
+  font-size:12px;  /* 小さく統一 */
+  color:#222;
+  font-weight:400;
+  line-height:1.5;
   margin-top:0;
   margin-bottom:20px;
-  font-size:16px;     /* Businessのpと同じ */
-  color:#222;         /* Businessのpと同じ色 */
-  font-weight:400;    /* 通常文章と同じ */
-  line-height:1.5;
 }
 
 /* ゲームリスト */
@@ -82,10 +82,6 @@ section .tagline {
   color:#4da6ff;
   text-decoration:none;
   font-weight:500;
-}
-
-.link:hover{
-  text-decoration:underline;
 }
 
 /* スマホ */
