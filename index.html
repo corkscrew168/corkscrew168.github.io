@@ -33,17 +33,18 @@ header{
 
 /* ロゴ（スマホ大きめ＋黒枠バランス調整） */
 .logo{
-  font-size:clamp(48px, 14vw, 64px); /* ←さらに大きく */
+  font-size:clamp(36px, 9vw, 56px); /* ←少し抑える */
   font-weight:700;
   background:#000;
   color:#fff;
-  padding:20px 32px; /* ←枠もしっかり拡大 */
-  border-radius:14px;
+  padding:16px 20px; /* ←横paddingを減らす */
+  border-radius:12px;
   display:inline-block;
   line-height:0.9;
   text-align:center;
-  letter-spacing:2px;
-  box-shadow:0 8px 22px rgba(0,0,0,0.3);
+  letter-spacing:1.5px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+  max-width:100%; /* ←これ重要（はみ出し防止） */
 }
 /* 下段少し小さく */
 .logo span:last-child{
