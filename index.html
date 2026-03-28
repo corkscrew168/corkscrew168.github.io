@@ -31,16 +31,23 @@ header{
   text-align:center;
 }
 
-/* ロゴ（ここが今回の重要ポイント） */
+/* ロゴ（高級カラー＋2段＋中央） */
 .logo{
-  font-size:clamp(22px, 6vw, 32px);
+  font-size:clamp(26px, 7vw, 40px);
   font-weight:700;
   background:#000;
   color:#fff;
-  padding:8px 14px;
+  padding:10px 16px;
   border-radius:8px;
   display:inline-block;
-  white-space:nowrap;
+  line-height:0.9;
+  text-align:center;
+  letter-spacing:1px;
+}
+
+/* 下段少し小さく */
+.logo span:last-child{
+  font-size:0.9em;
 }
 
 /* アニメ */
@@ -64,8 +71,10 @@ header{
 .C{ height:26px; }
 .D{ height:18px; }
 
+/* アニメーション */
+
 /* A */
-.A{ animation:A 18s linear infinite; }
+.A{ animation:A 12s linear infinite; }
 @keyframes A{
   0%{ left:-30px; transform:translateY(0); }
   40%{ left:30%; }
@@ -74,7 +83,7 @@ header{
 }
 
 /* B */
-.B{ animation:B 18s linear infinite; }
+.B{ animation:B 12s linear infinite; }
 @keyframes B{
   0%{ left:-60px; transform:translateY(0); }
   40%{ left:28%; }
@@ -84,18 +93,30 @@ header{
 }
 
 /* C */
-.C{ animation:C 18s linear infinite; }
+.C{ animation:C 12s linear infinite; }
 @keyframes C{
-  0%{ left:-90px; transform:translateY(0) rotate(0); }
-  45%{ left:34%; }
-  50%{ left:35%; transform:translateY(2px) rotate(90deg); }
-  60%{ left:35%; transform:translateY(2px) rotate(90deg); }
-  70%{ transform:rotate(0); }
-  100%{ left:105%; transform:translateY(0) rotate(0); }
+  0%{ left:-90px; transform:translateY(0); }
+
+  10%{ transform:translateY(-8px); }
+  20%{ transform:translateY(0); }
+
+  25%{ transform:translateY(-8px); }
+  35%{ transform:translateY(0); }
+
+  40%{ transform:translateY(-8px); }
+  50%{ transform:translateY(0); }
+
+  55%{ transform:translateY(-8px); }
+  65%{ transform:translateY(0); }
+
+  70%{ transform:translateY(-8px); }
+  80%{ transform:translateY(0); }
+
+  100%{ left:105%; transform:translateY(0); }
 }
 
 /* D */
-.D{ animation:D 18s linear infinite; }
+.D{ animation:D 12s linear infinite; }
 @keyframes D{
   0%{ left:-120px; transform:translateY(0); }
   45%{ left:32%; }
@@ -104,22 +125,15 @@ header{
   100%{ left:110%; transform:translateY(0); }
 }
 
-/* スマホ速度 */
-@media (max-width:600px){
-  .A,.B,.C,.D{
-    animation-duration:14s;
-  }
-}
-
 /* セクション */
 section{
-  padding:10px 20px;
+  padding:15px 20px;
 }
 
 h2{
   border-bottom:1px solid #ccc;
-  font-size:14px;
-  margin-bottom:10px;
+  font-size:18px;
+  margin-bottom:12px;
 }
 
 p, .link{
@@ -129,8 +143,8 @@ p, .link{
 .game-list a{
   display:block;
   background:#fff;
-  padding:12px;
-  margin-bottom:8px;
+  padding:14px;
+  margin-bottom:10px;
   border-radius:8px;
   text-decoration:none;
   color:#222;
@@ -156,7 +170,10 @@ footer{
 
 <header>
   <div class="logo">
-    C<span style="color:#ff8a1a;">or</span>kscre<span style="color:#70d4ff;">w</span> Games
+    <span>
+      C<span style="color:#d97706;">or</span>kscre<span style="color:#3aa6b9;">w</span>
+    </span><br>
+    <span>Games</span>
   </div>
 
   <div class="pixel-area">
