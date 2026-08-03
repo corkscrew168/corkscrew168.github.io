@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,170 +8,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-body{
-  margin:0;
-  font-family:'Poppins', sans-serif;
-  background:#ddd;
-  display:flex;
-  justify-content:center;
-}
-
-/* フレーム */
-.frame{
-  max-width:370px;
-  width:100%;
-  background:#f2f2f2;
-}
-
-/* ヘッダー */
-header{
-  padding:30px 10px;
-  text-align:center;
-}
-
-/* ロゴ（スマホ大きめ＋黒枠バランス調整） */
-.logo{
-  font-size:clamp(36px, 9vw, 56px); /* ←少し抑える */
-  font-weight:700;
-  background:#000;
-  color:#fff;
-  padding:16px 20px; /* ←横paddingを減らす */
-  border-radius:12px;
-  display:inline-block;
-  line-height:0.9;
-  text-align:center;
-  letter-spacing:1.5px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.25);
-  max-width:100%; /* ←これ重要（はみ出し防止） */
-}
-/* 下段少し小さく */
-.logo span:last-child{
-  font-size:0.9em;
-}
-
-/* PC用でさらに調整 */
-@media (min-width:768px){
-  .logo{
-    font-size:48px;
-    padding:16px 26px;
-  }
-}
-
-/* アニメ */
-.pixel-area{
-  position:relative;
-  height:70px;
-  margin-top:15px;
-  overflow:hidden;
-}
-
-.man{
-  position:absolute;
-  bottom:0;
-  width:5px;
-  background:#000;
-}
-
-/* サイズ */
-.A{ height:38px; }
-.B{ height:32px; }
-.C{ height:26px; }
-.D{ height:18px; }
-
-/* アニメーション */
-
-/* A */
-.A{ animation:A 6s linear infinite; }
-@keyframes A{
-  0%{ left:-30px; transform:translateY(0); }
-  40%{ left:30%; }
-  55%{ left:32%; }
-  100%{ left:95%; transform:translateY(0); }
-}
-
-/* B */
-.B{ animation:B 6s linear infinite; }
-@keyframes B{
-  0%{ left:-60px; transform:translateY(0); }
-  40%{ left:28%; }
-  50%{ left:32%; }
-  60%{ left:30%; }
-  100%{ left:100%; transform:translateY(0); }
-}
-
-/* C（ジャンプ5回・倒れない） */
-.C{ animation:C 6s linear infinite; }
-
-@keyframes C{
-  0%{ left:-90px; transform:translateY(0); }
-
-  10%{ transform:translateY(-4px); }
-  20%{ transform:translateY(0); }
-
-  25%{ transform:translateY(-4px); }
-  35%{ transform:translateY(0); }
-
-  40%{ transform:translateY(-4px); }
-  50%{ transform:translateY(0); }
-
-  55%{ transform:translateY(-4px); }
-  65%{ transform:translateY(0); }
-
-  70%{ transform:translateY(-4px); }
-  80%{ transform:translateY(0); }
-
-  100%{ left:105%; transform:translateY(0); }
-}
-
-/* D */
-.D{ animation:D 6s linear infinite; }
-@keyframes D{
-  0%{ left:-120px; transform:translateY(0); }
-  45%{ left:32%; }
-  50%{ left:30%; }
-  65%{ left:30%; }
-  100%{ left:110%; transform:translateY(0); }
-}
-
-/* セクション */
-section{
-  padding:15px 20px;
-}
-
-h2{
-  border-bottom:1px solid #ccc;
-  font-size:18px;
-  margin-bottom:12px;
-}
-
-p, .link{
-  font-size:12px;
-}
-
-.game-list a{
-  display:block;
-  background:#fff;
-  padding:14px;
-  margin-bottom:10px;
-  border-radius:8px;
-  text-decoration:none;
-  color:#222;
-}
-
-.link{
-  color:#4da6ff;
-}
-
-footer{
-  font-size:11px;
-  margin-top:20px;
-  padding:10px;
-  text-align:center;
-}
-
-</style>
 </head>
 
 <body>
@@ -179,6 +17,7 @@ footer{
 <div class="frame">
 
 <header>
+
   <div class="logo">
     <span>
       C<span style="color:#d97706;">or</span>kscre<span style="color:#3aa6b9;">w</span>
@@ -186,41 +25,93 @@ footer{
     <span>Games</span>
   </div>
 
-  <div class="pixel-area">
-    <div class="man A"></div>
-    <div class="man B"></div>
-    <div class="man C"></div>
-    <div class="man D"></div>
-  </div>
 </header>
 
-<section>
-<h2>Game</h2>
-<p>All games are playable without download.</p>
-
-<div class="game-list">
-  <a href="#">title 1</a>
-  <a href="#">title 2</a>
-  <a href="#">title 3</a>
-  <a href="#">title 4</a>
-</div>
-</section>
 
 <section>
-<h2>Business</h2>
-<p>Customizable for events & promotions.</p>
+  <h2>Games</h2>
+  <p>Click an image to play.</p>
+
+  <div class="game-list">
+
+    <a href="https://yourname.itch.io/game1" target="_blank">
+      <img src="images/game1.jpg" alt="Game 1">
+    </a>
+
+    <a href="https://yourname.itch.io/game2" target="_blank">
+      <img src="images/game2.jpg" alt="Game 2">
+    </a>
+
+    <a href="https://yourname.itch.io/game3" target="_blank">
+      <img src="images/game3.jpg" alt="Game 3">
+    </a>
+
+    <a href="https://yourname.itch.io/game4" target="_blank">
+      <img src="images/game4.jpg" alt="Game 4">
+    </a>
+
+  </div>
+
 </section>
 
+
 <section>
-<h2>Contact</h2>
-<a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfoyW_CNaztiuZGE3RXhN_NbS4yNZpVx0BgshRme7UXk-YVrA/viewform?usp=publish-editor">
-Get in Touch
-</a>
+  <h2>Services</h2>
+
+  <p>
+    Custom browser games for promotions, events,
+    and interactive experiences.
+  </p>
+
 </section>
+
+
+<section>
+  <h2>Links</h2>
+
+  <div class="link-list">
+
+    <p>
+      <a href="https://yourname.itch.io" target="_blank">
+        itch.io
+      </a>
+      (Games)
+    </p>
+
+    <p>
+      <a href="https://yourname.blogspot.com" target="_blank">
+        Google Blogger
+      </a>
+      (Pixel Art)
+    </p>
+
+    <p>
+      <a href="https://x.com/yourname" target="_blank">
+        X
+      </a>
+      (News)
+    </p>
+
+  </div>
+
+</section>
+
+
+<section>
+  <h2>Contact</h2>
+
+  <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfoyW_CNaztiuZGE3RXhN_NbS4yNZpVx0BgshRme7UXk-YVrA/viewform">
+    Get in Touch
+  </a>
+
+</section>
+
 
 <footer>
-© 2026 Takuya Kozai
+  © 2026 Corkscrew Games<br>
+  Created by Takuya Kozai
 </footer>
+
 
 </div>
 

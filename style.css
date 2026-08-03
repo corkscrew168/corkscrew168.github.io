@@ -1,0 +1,80 @@
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#ddd;
+  display:flex;
+  justify-content:center;
+}
+
+.frame{
+  max-width:370px;
+  width:100%;
+  background:#f2f2f2;
+}
+
+header{
+  padding:30px 10px;
+  text-align:center;
+}
+
+.logo{
+  font-size:clamp(36px, 9vw, 56px);
+  font-weight:700;
+  background:#000;
+  color:#fff;
+  padding:16px 20px;
+  border-radius:12px;
+  display:inline-block;
+  line-height:0.9;
+  text-align:center;
+  letter-spacing:1.5px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+  max-width:100%;
+}
+
+.logo span:last-child{
+  font-size:0.9em;
+}
+
+@media (min-width:768px){
+  .logo{
+    font-size:48px;
+    padding:16px 26px;
+  }
+}
+
+/* 共通UI */
+section{
+  padding:15px 20px;
+}
+
+h2{
+  border-bottom:1px solid #ccc;
+  font-size:18px;
+  margin-bottom:12px;
+}
+
+p, .link{
+  font-size:12px;
+}
+
+.game-list a{
+  display:block;
+  background:#fff;
+  padding:14px;
+  margin-bottom:10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#222;
+}
+
+.link{
+  color:#4da6ff;
+}
+
+footer{
+  font-size:11px;
+  margin-top:20px;
+  padding:10px;
+  text-align:center;
+}
