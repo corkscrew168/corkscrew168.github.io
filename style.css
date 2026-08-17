@@ -3,8 +3,7 @@ body{
   font-family:'Poppins', sans-serif;
   background:#ddd;
   display:flex;
-  justify-content:center;
-}
+  justify-content:center;}
 
 .frame{
   max-width:370px;
@@ -13,22 +12,20 @@ body{
 }
 
 header{
-  padding:30px 10px;
+  padding:30px 10px 5px;
   text-align:center;
 }
 
 .logo{
   font-size:clamp(36px, 9vw, 56px);
   font-weight:700;
-  background:#000;
-  color:#fff;
+  color:hsl(0, 0%, 5%);
   padding:16px 20px;
   border-radius:12px;
   display:inline-block;
   line-height:0.9;
   text-align:center;
   letter-spacing:1.5px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.25);
   max-width:100%;
 }
 
@@ -45,13 +42,13 @@ header{
 
 /* 共通UI */
 section{
-  padding:15px 20px;
+  padding:5px 20px 15px;
 }
 
 h2{
   border-bottom:1px solid #ccc;
   font-size:18px;
-  margin:5px 0;
+  margin:5px 0  10px;
 }
 
 p, .link{
