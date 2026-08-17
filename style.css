@@ -16,6 +16,7 @@ header{
   text-align:center;
 }
 
+
 .logo{
   font-size:clamp(36px, 9vw, 56px);
   font-weight:700;
