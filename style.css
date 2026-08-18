@@ -6,8 +6,8 @@ body{
   justify-content:center;}
 
 .frame{
-  max-width:370px;
-  width:100%;
+  width:370px;
+  max-width:100%;
   background:#f2f2f2;
 }
 
